@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>CSS Variables</title>
+  <style>
+    /* 共通変数として使用。プロパティでは使用できない。変数＋文字列もダメ */
+    :root {
+      --my-color: blue;
+    }
+    /* body {
+      --my-color: blue;
+    } */
+    h1 {
+      color: var(--my-color);
+      border-bottom: 3px solid var(--my-color);
+    }
+    p {
+      color: var(--my-color);
+    }
+  </style>
+</head>
+<body>
+  <h1>My Site</h1>
+  <p>Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. </p>
+</body>
+</html>

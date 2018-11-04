@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>CSS Animations</title>
+  <style>
+    .box {
+      width: 40px;
+      height: 40px;
+      background: skyblue;
+      cursor: pointer;
+      transition: 2s;
+      transition-timing-function: ease;
+    }
+    .box.moved {
+      transform: translate(400px, 0);
+    }
+    .box2.moved { transition-timing-function: cubic-bezier(0, 0.85, 0.12, 1.41); } /* ChromeDeveloper‚©‚ç‚Á‚Ä‚­‚é*/
+    .box3.moved {
+      transition-timing-function: ease-in-out;@/* ease-out‚ÍÅ‰‚Ì‚ë‚Ì‚ë“®‚­*/
+      height: 180px;
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="box box1"></div>
+  <div class="box box2"></div>
+  <div class="box box3"></div>
+  <script>
+    (() => {
+      'use strict';
+      document.querySelector('body').addEventListener('click', () => {
+        document.querySelectorAll('.box').forEach((box) => {
+          box.classList.add('moved');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
